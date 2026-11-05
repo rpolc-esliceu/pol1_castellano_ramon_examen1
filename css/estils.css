@@ -1,0 +1,41 @@
+html {
+box-sizing: border-box;
+font-size: 62.5%; /* 1rem = 10px */
+}
+*, *::before, *::after {
+box-sizing: inherit;
+}
+body { font-size: 1.6rem; } /* 16px */
+:root {
+--principal: #1750a1;
+--fons: #f3f1ec;
+}
+body { background-color: var(--fons); }
+header {
+background-color: var(--principal);
+color: white;
+}
+h1 { font-size: 3.2rem; } /* 32px */
+h2 { font-size: 2.4rem; } /* 24px */
+nav a {
+color: white;
+text-decoration: none;
+}
+
+/* Modifica tu article para añadir el margen izquierdo */
+article {
+width: 400px;
+padding: 20px;
+border: 1px solid black;
+margin-bottom: 20px;
+margin-left: 20px; /* Desplaza el recuadro ligeramente a la derecha igual que en tu muestra */
+background-color: transparent; /* Mantiene el fondo gris del body visible dentro */
+}
+
+/* --- AÑADE ESTA REGLA PARA LAS IMÁGENES --- */
+article img {
+display: block;
+max-width: 100%;  /* Evita que la imagen se salga del cuadro de 400px */
+height: auto;     /* Mantiene la proporción original de la foto */
+margin-top: 15px; /* Separa la imagen del texto superior */
+}
