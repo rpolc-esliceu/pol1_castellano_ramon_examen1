@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+/* Capçalera amb Flexbox */
+.capcalera {
+  background-color: #111;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.capcalera h1 {
+  font-size: 1.5rem;
+}
+
+.enviament {
+  background-color: #fff;
+  color: #111;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+.contenidor {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.titol-seccio {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Llista de productes amb GRID (Mòbil 375px: 1 columna) */
+.llista-productes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Targeta de producte */
+.producte {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.producte img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background-color: #fff;
+  padding: 12px;
+}
+
+.info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0.6rem;
+}
+
+.info h3 {
+  font-size: 1rem;
+}
+
+/* Fila de preus i descompte */
+.preus {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.preu-abans {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.preu-ara {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.descompte {
+  margin-left: auto;
+  background-color: #e60023;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.producte button {
+  margin-top: auto;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.producte button:hover {
+  background-color: #333;
+}
+
+/* Tauleta 700px (2 columnes) */
+@media (min-width: 700px) {
+  .llista-productes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Escriptori 1100px (4 columnes) */
+@media (min-width: 1100px) {
+  .llista-productes {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
